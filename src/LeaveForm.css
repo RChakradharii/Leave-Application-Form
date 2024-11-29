@@ -52,15 +52,16 @@ body {
 .form-container {
   max-width: 400px; /* Adjust size as needed */
   padding: 30px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(147, 64, 64, 0.9);
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   z-index: 1;
-  
-  /* Position the container slightly to the right */
-  margin-left: 60%; /* Push the container to the right side */
+
+  /* Adjust container position */
+  position: relative; /* Allow positioning */
+  right: 100px; /* Push the container slightly to the right */
   margin-top: 10%; /* Adjust the top margin for proper alignment */
 }
 
@@ -148,18 +149,81 @@ button:disabled {
   z-index: 1;
 }
 
+
+
 /* Responsive Design */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      justify-content: center; /* Center-align items */
+      padding: 10px 15px; /* Reduce padding for smaller screens */
+  }
+
+  .logo {
+      height: 30px; /* Smaller logo height for smaller screens */
+      width: auto;  /* Maintain aspect ratio */
+      margin-bottom: 10px; /* Add space below the logo */
+  }
+
   .form-container {
-      max-width: 95%; /* Ensure form fits smaller screens */
-      padding: 15px;
+      max-width: 90%; /* Reduce form size for smaller screens */
+      padding: 20px; /* Adjust padding */
+      margin-top: 15%; /* Adjust margin for smaller screens */
   }
 
   h2 {
-      font-size: 20px;
+      font-size: 24px; /* Slightly smaller heading */
+  }
+
+  input, select {
+      font-size: 14px; /* Adjust input font size */
+      padding: 10px; /* Slightly reduce padding */
   }
 
   button {
-      font-size: 16px;
+      font-size: 16px; /* Adjust button text size */
+      padding: 10px 15px; /* Adjust padding for smaller buttons */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+      padding: 8px 10px; /* Further reduce padding for extra-small screens */
+  }
+
+  .logo {
+      height: 25px; /* Further reduce logo size */
+      margin-bottom: 8px; /* Adjust spacing */
+  }
+
+  .form-container {
+      max-width: 100%; /* Form spans entire width */
+      padding: 15px; /* Reduce padding further */
+      margin-top: 10%; /* Adjust top margin */
+  }
+
+  h2 {
+      font-size: 20px; /* Smaller heading for very small screens */
+  }
+
+  button {
+      font-size: 14px; /* Smaller button text */
+      padding: 8px 12px; /* Adjust button padding */
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain; /* Adjust image size for smaller screens */
+    background-position: center top; /* Align image to the top-center */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-size: cover; /* Maintain cover for extra small screens */
+    background-position: top; /* Align image to the top */
   }
 }

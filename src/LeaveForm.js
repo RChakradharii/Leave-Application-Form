@@ -65,8 +65,9 @@ const LeaveForm = () => {
       border: "1px solid #ccc",
       borderRadius: "8px",
       backgroundColor: "#f9f9f9",
-      position: "center",
+      position: "relative",
       zIndex: 2, // Ensures it appears above the video
+      left: "20%",
     },
     input: {
       width: "100%",
@@ -140,7 +141,7 @@ const LeaveForm = () => {
     <img 
       src="/jpg.png" 
       alt="NavGurukul Logo" 
-      style={{ height: '200px', verticalAlign: 'middle',zIndex:-2 }} 
+      style={{ height: '150px', verticalAlign: 'middle',zIndex:-2 }} 
     />
     {/* <span style={formStyles.logoText}>navGurukul</span> */}
   </a>
