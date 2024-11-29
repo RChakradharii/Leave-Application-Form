@@ -1,0 +1,165 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  /* background-color: black; */
+  background-image: url("/public/image\ 1.jpg ");
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size:auto;
+  height: 713;
+  width: 1494;
+  align-items: stretch; /* Allow children to expand */
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: flex-end; /* Align navbar items to the right */
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Ensures it appears above the video */
+}
+
+.logo {
+  height: 40px; /* Set your logo's height */
+  width: auto;  /* Maintain aspect ratio */
+  display: block; /* Removes any extra space below the image */
+  margin: 0;
+  padding: 0;
+  border: none;
+  /* z-index: -2; */
+  background: transparent; /* Ensure the background is transparent */
+}
+
+.logo:hover {
+  color: #0056b3;
+}
+
+/* Form Container Styling */
+.form-container {
+  max-width: 400px; /* Adjust size as needed */
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1;
+  
+  /* Position the container slightly to the right */
+  margin-left: 60%; /* Push the container to the right side */
+  margin-top: 10%; /* Adjust the top margin for proper alignment */
+}
+
+
+
+/* Heading Styling */
+h2 {
+  font-size: 28px; /* Slightly larger for better readability */
+  color: #1ea814;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs and Labels */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap between fields */
+}
+
+label {
+  text-align: left;
+  font-size: 16px; /* Slightly larger font for labels */
+  color: #555;
+  font-weight: 600;
+}
+
+input,
+select {
+  padding: 12px; /* More padding for better usability */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* Larger input text */
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px; /* Bigger button text */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Message Box Styling */
+.message {
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #adb5bd;
+  border-radius: 4px;
+  background-color: #e9ecef;
+  color: #495057;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+  .form-container {
+      max-width: 95%; /* Ensure form fits smaller screens */
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 20px;
+  }
+
+  button {
+      font-size: 16px;
+  }
+}
